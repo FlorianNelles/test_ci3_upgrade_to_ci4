@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2014-2019 British Columbia Institute of Technology
+Copyright (c) 2021 Florian Nelles https://github.com/FlorianNelles <br>
+Copyright (c) 2014-2019 British Columbia Institute of Technology <br>
 Copyright (c) 2019-2021 CodeIgniter Foundation
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
