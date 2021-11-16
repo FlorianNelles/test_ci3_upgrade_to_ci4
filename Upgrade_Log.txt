@@ -1,0 +1,626 @@
+################################################################################
+                     |-----| UPGRADE: COMPLETED |-----|
+################################################################################
+This Upgrade Log sums up all adjustment that were accomplished by the CI-Upgrader. 
+
+SECTIONS: 
+1. INSTALLATION
+2. COPIED DIRECTORIES AND FILES
+3. EDITED FILES
+4. WHAT TO DO AFTER CI-UPGRADER
+
+################################################################################
+                       |-----| 1. INSTALLATION |-----|                       
+################################################################################
+
+Your CodeIgniter 3 source project is 'test_ci3' (Path: 'C:\xampp\htdocs\test_ci3').
+
+New CodeIgniter 4 project 'test_ci3_upgrade_to_ci4' was successfully installed (Path: 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4').
+
+This installation includes the ci3-to-4-upgrade-helper from Kenji Suzuki (For more informations: https://github.com/kenjis/ci3-to-4-upgrade-helper).
+
+################################################################################
+                 |-----| 2. COPIED DIRECTORIES AND FILES |-----|
+################################################################################
+
+Here you can check out, which directories and files were copied from your old CI3 project to your new CI4 project. 
+If your are missing something, you have to copy it by your own hand. 
+
+The CI-Upgrader ran through your Views, Models, Controllers, Core (if exists, the Upgrader will just copy your MY_Controller.php from Core), Migrations, Language, Libraries, Helper and Assets. 
+(Assets if the most used name for the directory, which contains your img, css, js, etc... files. If you use a different name in your CI3 project or if your assets folder is not in your root or application directory, the Upgrader will not find and copy these files. In this case, you have to copy it manually.)
+
+-------------------------------------------------------------------------------
+
+################################  |VIEWS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\views'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Views'
+
+|Directories: 6 |
+   - errors
+   - cli
+   - html
+   - pages
+   - posts
+   - templates
+
+|Files: 26 |
+   - error_404_ci3.php
+   - error_404_ci3.php
+   - error_db.php
+   - error_exception_ci3.php
+   - error_exception_ci3.php
+   - error_general.php
+   - error_php.php
+   - index.html
+   - error_404_ci3.php
+   - error_404_ci3.php
+   - error_db.php
+   - error_exception_ci3.php
+   - error_exception_ci3.php
+   - error_general.php
+   - error_php.php
+   - index.html
+   - index.html
+   - index.html
+   - about.php
+   - home.php
+   - create.php
+   - edit.php
+   - index.php
+   - read.php
+   - footer.php
+   - header.php
+
+-------------------------------------------------------------------------------
+
+################################  |MODELS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\models'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Models'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 2 |
+   - index.html
+   - Post_model.php
+
+-------------------------------------------------------------------------------
+
+################################  |CONTROLLERS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\controllers'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Controllers'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 6 |
+   - index.html
+   - Languages.php
+   - Migrate.php
+   - Pages.php
+   - Posts.php
+   - Welcome.php
+
+-------------------------------------------------------------------------------
+
+################################  |CORE|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\core'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Controllers'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 1 |
+   - MY_Controller.php
+
+-------------------------------------------------------------------------------
+
+################################  |MIGRATIONS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\migrations'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Database\Migrations'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 1 |
+   - 20201110170319_create_posts.php
+
+-------------------------------------------------------------------------------
+
+################################  |LANGUAGE|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\language'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Language'
+
+|Directories: 2 |
+   - english
+   - german
+
+|Files: 4 |
+   - .gitkeep
+   - navbar_lang.php
+   - navbar_lang.php
+   - index.html
+
+-------------------------------------------------------------------------------
+
+################################  |LIBRARIES|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\libraries'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Libraries'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 2 |
+   - index.html
+   - Someclass.php
+
+-------------------------------------------------------------------------------
+
+################################  |HELPERS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\helpers'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Helpers'
+
+|Directories: 0 |
+   - No Directories found in CI3-Path
+
+|Files: 1 |
+   - index.html
+
+-------------------------------------------------------------------------------
+
+################################  |ASSETS|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\assets'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\assets'
+
+|Directories: 1 |
+   - css
+
+|Files: 1 |
+   - style.css
+
+################################################################################
+|-----| 3. EDITED FILES |-----| 
+################################################################################
+
+Here you can check out, which lines were edited, added or removed from every file. 
+You should consider, that the CI-Upgrader can not transfer all files and functions of your CI3 project without errors into CI4. For more informations about the adjustments you have to make or what can cause errors after the Upgrade, take a look at section '4. WHAT TO DO AFTER CI-UPGRADER.'
+
+The CI-Upgrader transferred all your settings from the most important Config files (autoload.php, config.php, database.php, migration.php, routes.php) and a lot of code from your Models, Views, Controllers, Libraries, Languages, and Migrations files with the help of the ci3-to-4-upgrade-helper by Kenjis Suzuki in CI4.
+
+-------------------------------------------------------------------------------
+
+################################  |CONFIG FILES|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\config'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Config'
+
+| App.php (CI4) |
+Lines edited: 4
+   - [Line 26]: public $baseURL = 'http://localhost/test_ci3';
+   - [Line 39]: public $indexPage = '';
+   - [Line 72]: public $defaultLocale = 'english';
+   - [Line 299]: public $cookieHTTPOnly = FALSE;
+
+-------------------------------------------------------------------------------
+
+| Logger.php (CI4 |
+Lines edited: 1
+   - [Line 40]: public $threshold = 0;
+
+-------------------------------------------------------------------------------
+
+| Cache.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| Encryption.php CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| Database.php (CI4) |
+Lines edited: 7
+   - [Line 61]: 'hostname' => 'localhost',
+   - [Line 36]: 'username' => 'root',
+   - [Line 62]: 'username' => 'root',
+   - [Line 38]: 'database' => 'test_ci3',
+   - [Line 64]: 'database' => 'test_ci3',
+   - [Line 65]: 'DBDriver' => 'mysqli',
+   - [Line 66]: 'DBPrefix' => '',
+
+-------------------------------------------------------------------------------
+
+################################  |ROUTES|  ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\config\routes.php'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Config\Routes.php'
+
+Lines edited: 3
+   - [Line 20]: $routes->setDefaultController('pages');
+   - [Line 21]: $routes->setDefaultMethod('view');
+   - [Line 34]: $routes->get('/', 'pages::view');
+
+Lines added: 6
+   - $routes->add('posts/edit/(:any)', 'posts::edit/$1');
+   - $routes->add('posts/delete/(:any)', 'posts::delete/$1');
+   - $routes->add('posts/create', 'posts::create');
+   - $routes->add('posts/read/(:any)', 'posts::read/$1');
+   - $routes->add('posts', 'posts::index');
+   - $routes->add('(:any)', 'pages::view/$1');
+
+-------------------------------------------------------------------------------
+
+################################  |MIGRATIONS| ################################
+
+|--------------------| Migrations Config |--------------------|
+[CI3] 'C:\xampp\htdocs\test_ci3\application\config\migration.php'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Config\Migrations.php'
+
+| Migrations.php (CI4) |
+Lines edited: 1
+   - [Line 54]: public $timestampFormat = 'YmdHis_';
+
+-------------------------------------------------------------------------------
+
+|--------------------| Migrations Files |--------------------|
+[CI3] 'C:\xampp\htdocs\test_ci3\application\migrations'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Database\Migrations'
+
+#####  | 1. Filenames |  #####
+(In CI4, Migrations files must be in timestamp format 'YmdHis_')
+
+Migrations files renamed: 0
+   - All migrations files are already in timestamp format
+
+-------------------------------------------------------------------------------
+
+#####  | 2. Files content |  #####
+
+| 20201110170319_create_posts.php (CI4) |
+Lines edited: 8
+   - [Line 2]: namespace App\Database\Migrations; use CodeIgniter\Database\Migration;   |added|
+   - [Line 3]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+   - [Line 5]: class CreatePosts extends CI_Migration {
+   - [Line 5]: class CreatePosts extends Migration {
+   - [Line 10]: $this->forge->addField(array(
+   - [Line 29]: $this->forge->addKey('id', TRUE);
+   - [Line 30]: $this->forge->createTable('posts');
+   - [Line 36]: $this->forge->dropTable('posts');
+
+-------------------------------------------------------------------------------
+
+################################  |LANGUAGES| ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\libraries'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Libraries'
+
+| en\Validation.php (CI4) |
+Lines edited: 2
+   return [
+   ];
+
+-------------------------------------------------------------------------------
+
+| english\navbar_lang.php (CI4) |
+Lines edited: 8
+   return [
+	'home' => 'Home',
+	'about' => 'About',
+	'news' => 'News',
+	'language' => 'Language: ',
+	'english' => 'English',
+	'german' => 'German',
+   ];
+
+-------------------------------------------------------------------------------
+
+| german\navbar_lang.php (CI4) |
+Lines edited: 8
+   return [
+	'home' => 'Startseite',
+	'about' => 'Über uns',
+	'news' => 'Neuigkeiten',
+	'language' => 'Sprache: ',
+	'english' => 'Englisch',
+	'german' => 'Deutsch',
+   ];
+
+-------------------------------------------------------------------------------
+
+################################  |LIBRARIES| ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\language'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Language'
+
+#####  | 1. Subfolders |  #####
+(In CI4, all names of Libraries subfolders has to be first letter uppercase)
+
+Subfolder names edited: 0
+   - All subfoler names are already correct or no subfolders found
+
+-------------------------------------------------------------------------------
+
+#####  | 2. Files content |  #####
+
+| Someclass.php (CI4) |
+Lines edited: 2
+   - [Line 2]: namespace App\Libraries;   |added|
+   - [Line 3]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+################################  |MODELS| ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\models'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Models'
+
+#####  | 1. Subfolders |  #####
+(In CI4, all names of Models subfolders has to be first letter uppercase)
+
+Subfolder names edited: 0
+   - All subfoler names are already correct or no subfolders found
+
+-------------------------------------------------------------------------------
+
+#####  | 2. Files content |  #####
+
+| Post_model.php (CI4) |
+Lines edited: 1
+   - [Line 2]: namespace App\Models; use Kenjis\CI3Compatible\Core\CI_Model;   |added|
+
+-------------------------------------------------------------------------------
+
+################################  |CONTROLLERS| ################################
+[CI3] 'C:\xampp\htdocs\test_ci3\application\controllers'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Controllers'
+
+#####  | 1. Subfolders |  #####
+(In CI4, all names of Models subfolders has to be first letter uppercase)
+
+Subfolder names edited: 0
+   - All subfoler names are already correct or no subfolders found
+
+-------------------------------------------------------------------------------
+
+#####  | 2. Files Content |  #####
+
+|--------------------| BaseController |--------------------|
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Controllers\BaseController.php'
+
+| BaseController.php (CI4) |
+Lines edited: 2
+   - [Line 38]: protected $helpers = ['url','form'];
+   - [Line 29]: protected $libraries = [];    |added| 
+
+|--------------------| Other Controllers Files |--------------------|
+[CI3] 'C:\xampp\htdocs\test_ci3\application\controllers'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Controllers'
+
+| Home.php (CI4) |
+Lines edited: 1
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+
+-------------------------------------------------------------------------------
+
+| Languages.php (CI4) |
+Lines edited: 3
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+   - [Line 19]: return redirect()->to(site_url($_SERVER['HTTP_REFERER']));
+   - [Line 27]: return redirect()->to(site_url($_SERVER['HTTP_REFERER']));
+
+-------------------------------------------------------------------------------
+
+| Migrate.php (CI4) |
+Lines edited: 2
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| MY_Controller.php (CI4) |
+Lines edited: 1
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+
+-------------------------------------------------------------------------------
+
+| Pages.php (CI4) |
+Lines edited: 5
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+   - [Line 22]: $this->lang->load('navbar', $idiom);   |deleted| 
+   - [Line 25]: echo view('templates/header');
+   - [Line 26]: echo view('pages/'.$page, $data);
+   - [Line 27]: echo view('templates/footer');
+
+-------------------------------------------------------------------------------
+
+| Posts.php (CI4) |
+Lines edited: 17
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+   - [Line 20]: $this->lang->load('navbar', $idiom);   |deleted| 
+   - [Line 29]: echo view('templates/header');
+   - [Line 30]: echo view('posts/index', $data);
+   - [Line 31]: echo view('templates/footer');
+   - [Line 39]: echo view('templates/header');
+   - [Line 40]: echo view('posts/read', $data);
+   - [Line 41]: echo view('templates/footer');
+   - [Line 52]: echo view('templates/header');
+   - [Line 53]: echo view('posts/create', $data);
+   - [Line 54]: echo view('templates/footer');
+   - [Line 63]: return redirect()->to(site_url('posts'));
+   - [Line 76]: return redirect()->to(site_url('posts'));
+   - [Line 88]: echo view('templates/header');
+   - [Line 89]: echo view('posts/edit', $data);
+   - [Line 90]: echo view('templates/footer');
+   - [Line 99]: return redirect()->to(site_url('posts'));
+
+-------------------------------------------------------------------------------
+
+| Welcome.php (CI4) |
+Lines edited: 3
+   - [Line 2]: namespace App\Controllers; use Kenjis\CI3Compatible\Core\CI_Controller;   |added|
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+   - [Line 26]: echo view('welcome_message');
+
+-------------------------------------------------------------------------------
+
+################################  |VIEWS| ################################
+
+|--------------------| Views Config |--------------------|
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Config\View.php'
+
+| View.php (CI4) |
+Lines edited: 2
+   - [Line 6]: use Kenjis\CI3Compatible\Traits\View\ThisConfigInView;   |added|
+   - [Line 9]: use ThisConfigInView;   |added|
+
+-------------------------------------------------------------------------------
+
+|--------------------| Views Files |--------------------|
+[CI3] 'C:\xampp\htdocs\test_ci3\application\views'
+[CI4] 'C:\xampp\htdocs\test_ci3_upgrade_to_ci4\app\Views'
+
+| error_404.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| error_404_ci3.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_db.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_exception.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| error_exception_ci3.php (CI4) |
+Lines edited: 1
+   - [Line 1]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_general.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_php.php (CI4) |
+Lines edited: 1
+   - [Line 1]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| production.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| error_404.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| error_404_ci3.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_db.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_exception.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| error_exception_ci3.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_general.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| error_php.php (CI4) |
+Lines edited: 1
+   - [Line 2]: defined('BASEPATH') OR exit('No direct script access allowed');   |deleted|
+
+-------------------------------------------------------------------------------
+
+| production.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| about.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| home.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| create.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| edit.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| index.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| read.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| footer.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+| header.php (CI4) |
+Lines edited: 9
+   - [Line 25]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>"><?= $this->lang->line("home") ?></a>
+   - [Line 25]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>"><?= $this->lang->line("home") ?></a>
+   - [Line 29]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>about"><?= $this->lang->line('about') ?></a>
+   - [Line 29]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>about"><?= lang('FILENAME.about') ?></a>
+   - [Line 33]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>posts"><?= $this->lang->line('news') ?></a>
+   - [Line 33]: <a class="nav-link" href="<?php echo base_url(),'/'; ?>posts"><?= lang('FILENAME.news') ?></a>
+   - [Line 40]: <?= lang('FILENAME.language') ?><?php echo $this->session->userdata('language');?>
+   - [Line 43]: <a class="dropdown-item" href="<?php echo base_url(),'/'; ?>languages/english">english</a>
+   - [Line 44]: <a class="dropdown-item" href="<?php echo base_url(),'/'; ?>languages/german">german</a>
+
+-------------------------------------------------------------------------------
+
+| welcome_message.php (CI4) |
+Lines edited: 0
+
+-------------------------------------------------------------------------------
+
+################################################################################
+|-----| 4. WHAT TO DO AFTER CI-UPGRADER |-----|
+################################################################################
+Check out the User-Guide of CI-Upgrader. Here you will find all informations about the tasks you have to do after the upgrade.
+(https://github.com/FlorianNelles/CI-Upgrader/blob/main/Documentation.md#after-the-upgrade) 
